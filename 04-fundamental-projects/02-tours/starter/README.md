@@ -4,6 +4,9 @@
 
 ## Steps
 
+### Tours api
+https://course-api.com/react-tours-project
+
 #### Setup
 
 First create - three components (Tours, Tour, and Loading), you can create three separate files in your project directory: Tours.jsx, Tour.jsx, and Loading.jsx. In each of these files, you will define a React functional component that returns JSX code for rendering the respective component.
