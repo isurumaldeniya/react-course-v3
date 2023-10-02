@@ -52,7 +52,7 @@ const App = () => {
       </main>
     );
   }
-
+  //we can pass the functions from one component to another using PROP
   return (
     <main>
       <Tours tours={tours} removeTours={removeTours} />
