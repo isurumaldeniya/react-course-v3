@@ -1,4 +1,4 @@
-import Starter from '../src/tutorial/06-forms/starter/05-form-data';
+import Starter from '../src/tutorial/05-leverage-javascript/starter/Starter';
 
 function App() {
   return (
