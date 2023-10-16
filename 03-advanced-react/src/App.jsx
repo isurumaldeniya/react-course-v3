@@ -1,4 +1,4 @@
-import Starter from '../src/tutorial/05-leverage-javascript/starter/Starter';
+import Starter from './tutorial/09-context-api/starter/Navbar';
 
 function App() {
   return (
