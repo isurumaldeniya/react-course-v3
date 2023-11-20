@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { NavbarContext } from './Navbar';
 
+
 const UserContainer = () =>
   //since we are using useContext hook we dont need prop drilling
   // { user, logout, login }
@@ -29,5 +30,8 @@ const UserContainer = () =>
       </>
     );
   };
+
+
+
 
 export default UserContainer;

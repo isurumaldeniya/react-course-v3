@@ -1,5 +1,7 @@
-import { useState, useReducer } from 'react';
+import { useReducer } from 'react';
 import { data } from '../../../data';
+import { CLEAR_ITEMS, REMOVE_ITEM, RESET_ITEMS } from './constant';
+import reducer from './reducer';
 
 //default state
 const defaultState = {
@@ -7,16 +9,6 @@ const defaultState = {
 };
 
 //reducer function that will update the state
-const reducer = (state, action) => {
-  if (action.type === 'Clear_Items') {
-    return { ...state, people: [] };
-  } else if (action.type === 'Reset_Items') {
-    return { ...state, people: data };
-  } else if (action.type === 'Remove_Item') {
-    let newPeople = state.people.filter((person) => person.id !== action.id);
-    return { ...state, people: newPeople };
-  }
-};
 
 const ReducerBasics = () => {
   // const [people, setPeople] = useState(data);
@@ -25,20 +17,19 @@ const ReducerBasics = () => {
   //dispatch will have an action always and the action will be handled in the reducer function. Then it will update the state of the variable.
 
   const removeItem = (id) => {
-
     //passing id as another parameter for the dispatch
-    dispatch({ type: 'Remove_Item', id: id });
+    dispatch({ type: REMOVE_ITEM, id: id });
     // let newPeople = people.filter((person) => person.id !== id);
     // setPeople(newPeople);
   };
 
   const clearItems = () => {
-    dispatch({ type: 'Clear_Items' });
+    dispatch({ type: CLEAR_ITEMS });
     // setPeople([]);
   };
 
   const resetItems = () => {
-    dispatch({ type: 'Reset_Items' });
+    dispatch({ type: RESET_ITEMS });
     // setPeople(data);
   };
 
