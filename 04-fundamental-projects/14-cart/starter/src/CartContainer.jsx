@@ -1,14 +1,16 @@
 import { useGlobalContext } from './AppContext';
 import CartItem from './CartItem';
 import { CLEAR_CART } from './actions';
-import cartItems from './data';
 
 const CartContainer = () => {
-  const { state, dispatch } = useGlobalContext();
+  const { state, dispatch, totalCost } = useGlobalContext();
 
   const cart = state.cart;
+
+  //creating an array from cart MAP
   const cartArray = Array.from(cart.entries());
 
+  //dispatching action for clearing the cart
   function clearCart() {
     dispatch({ type: CLEAR_CART });
   }
@@ -41,7 +43,7 @@ const CartContainer = () => {
         <hr />
         <div>
           <h5 className="cart-total">
-            total <span>{state.totalCost}</span>
+            total <span>{totalCost}</span>
           </h5>
         </div>
         <button className="btn btn-hipster" onClick={() => clearCart()}>

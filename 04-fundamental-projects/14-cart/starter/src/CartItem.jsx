@@ -3,8 +3,9 @@ import { useGlobalContext } from './AppContext';
 import { ADD_ITEM, DECREASE_ITEM, REMOVE_ITEM } from './actions';
 
 const CartItem = ({ id, img, title, price, amount }) => {
-  const { state, dispatch } = useGlobalContext();
+  const { dispatch } = useGlobalContext();
 
+  //dispatching actions for each state changes
   function addItem(id) {
     dispatch({ type: ADD_ITEM, id: id });
   }
