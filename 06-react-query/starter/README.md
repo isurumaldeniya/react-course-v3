@@ -96,6 +96,7 @@ CRUD stands for Create, Read, Update, and Delete, which are the basic operations
 
 [Task API Docs](https://documenter.getpostman.com/view/18152321/2s93RTSDLn)
 
+
 #### UseEffect Approach
 
 ```js
@@ -104,7 +105,7 @@ const fetchTasks = async () => {
     const response = await customFetch.get('/');
     console.log(response.data);
   } catch (error) {
-    +console.error(error);
+    console.error(error);
   }
 };
 
